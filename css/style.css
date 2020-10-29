@@ -7,23 +7,30 @@ body{
 	background-color: #E9F8FB;
 }
 
+/*mobile first images*/
+
 .brooke_image{
 	display: block;
 	margin-left: auto;
 	margin-right: auto;
+	max-height: 200px;
+	width: auto;
 }
 
 .brooke_image_long{
 	display: block;
 	margin-left: auto;
 	margin-right: auto;
-	height: 175px;
+	max-height: 75px;
 	width: auto;
 }
 
-header{
+#h_img{
+	padding: 20px;
 	border-bottom: 6px solid #93E0EC;
 }
+
+/*nav header*/
 
 .nav_links{
 	display: grid;
@@ -32,27 +39,184 @@ header{
 	padding: 25px;
 	justify-items: center;
 	list-style: none;
+	font-size: 15px;
 }
 
 .nav_links a{
+	color: #0A3136;
 	text-decoration: none;
-}
-
-.nav_links a:focus{
-	text-decoration: underline;
 }
 
 .nav_links a:hover{
 	text-decoration: underline;
 }
 
-.nav_links a:visited{
-	color: #0F4850
+.nav_links a:focus{
+	text-decoration: underline;
 }
 
+/*paragraph headers*/
+
 h1{
-	font-size: 40px;
+	font-size: 25px;
 	line-height: 0;
-	padding: 50px 0;
+	padding: 30px;
+	text-align: center;
+	text-overflow: inherit;
+}
+
+h2{
+	font-size: 20px;
 	text-align: center;
 }
+
+/*footer*/
+
+footer{
+	background-color: black;
+  	color: white;
+  	padding: 10px;
+	text-align: right;
+	font-style: italic;
+}
+
+footer a{
+	color: white
+}
+
+footer a:hover{
+	color: #CAF0F5;
+}
+
+footer a:focus{
+	color: #CAF0F5;
+}
+
+/*about page*/
+
+h3{
+	text-align: center;
+}
+
+.about_me{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+figure > img{
+  border: 6px #93E0EC solid;
+  margin: 10px;
+  width: 300px;
+}
+
+/*leadership page*/
+
+h2 a{
+	text-decoration: none;
+	color: #000000;
+}
+
+h2 a:hover{
+	color: #17727E;
+	text-decoration: underline;
+}
+
+h2 a:focus{
+	color: #17727E;
+	text-decoration: underline;
+}
+
+.activities h3{
+	font-style: italic;
+}
+
+.container-leadership{
+	display: grid;
+	position: relative;
+	grid-template-columns: auto auto;
+  	grid-template-rows: auto auto;
+ 	grid-row-gap: 15px;
+}
+
+.zta, .ktp{
+	grid-column: 1 / span 1;
+	grid-row: auto / span 1;
+	background-color: #FFFFFF;
+  	border: 6px solid #93E0EC;
+	padding: 5px;
+}
+
+.ktp-image img, .zta-image img{
+	grid-column: 1 / -1;
+	grid-row: auto / 1;
+	align-items: center;
+	justify-content: center;
+	padding: 10px;
+	max-width: 350px;
+	overflow: hidden;
+}
+
+
+.zta, .zta-image{
+	grid-row: 1 / auto;
+}
+
+.ktp, .ktp-image{
+	grid-row: 2 / auto;
+}
+
+/*work page*/
+
+.experience h3{
+	font-style: italic;
+}
+
+.container-work{
+	display: grid;
+	position: relative;
+	grid-template-columns: auto auto;
+  	grid-template-rows: auto auto auto auto;
+ 	grid-row-gap: 15px;
+}
+
+.juni, .ncaa, .nextlevel, .skills{
+	grid-column: 1 / span 1;
+	grid-row: auto / span 1;
+	background-color: #FFFFFF;
+  	border: 6px solid #93E0EC;
+	padding: 5px;
+}
+
+.juni-image img, .ncaa-image img, .nextlevel-image img{
+	grid-column: 1 / -1;
+	grid-row: auto / 1;
+	align-items: center;
+	justify-content: center;
+	padding: 10px;
+	max-width: 350px;
+	overflow: hidden;
+}
+
+.juni, .juni-image{
+	grid-row: 1 / auto;
+}
+
+.ncaa, .ncaa-image{
+	grid-row: 2 / auto;
+}
+
+.nextlevel, .nextlevel-image{
+	grid-row: 3 / auto;
+}
+
+.skills{
+	grid-row: 4 / auto;
+}
+
+.skills ul{
+	list-style-type: none;
+}
+
+
