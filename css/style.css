@@ -15,6 +15,8 @@ body{
 	margin-right: auto;
 	max-height: 200px;
 	width: auto;
+	animation-name: logo_stretch;
+	animation-duration: 10s;
 }
 
 .brooke_image_long{
@@ -28,6 +30,20 @@ body{
 #h_img{
 	padding: 20px;
 	border-bottom: 6px solid #93E0EC;
+}
+
+/*animation*/
+
+@-webkit-keyframes logo_stretch{
+  /*Your code here.*/
+	from {height: 25px}
+	to {height: 200px}
+}
+
+@keyframes logo_stretch{
+  /*Your code here.*/
+	from {height: 25px}
+	to {height: 200px}
 }
 
 /*nav header*/
@@ -48,10 +64,12 @@ body{
 }
 
 .nav_links a:hover{
+	color: #FFFFFF;
 	text-decoration: underline;
 }
 
 .nav_links a:focus{
+	color: #FFFFFF;
 	text-decoration: underline;
 }
 
@@ -78,6 +96,7 @@ footer{
   	padding: 10px;
 	text-align: right;
 	font-style: italic;
+	margin-top: 10px;
 }
 
 footer a{
@@ -92,6 +111,20 @@ footer a:focus{
 	color: #CAF0F5;
 }
 
+/*home page*/
+
+.summary, .academics{
+	border: 6px #93E0EC solid;
+	background-color: #FFFFFF;
+	margin: 10px;
+	padding: 10px;
+}
+
+.containter{
+	display: flex;
+	flex-direction: column;
+}
+
 /*about page*/
 
 h3{
@@ -100,15 +133,26 @@ h3{
 
 .about_me{
 	display: flex;
-	flex-direction: column;
+	flex-direction: row;
+	flex-wrap: wrap;
 	justify-content: center;
-	align-items: center;
+	align-items: flex-start;
 }
 
-figure > img{
-  border: 6px #93E0EC solid;
-  margin: 10px;
-  width: 300px;
+figure{
+	display: table;
+	table-layout: fixed;
+	}
+	
+figure img{
+	border: 6px #93E0EC solid;
+	margin: 10px;
+	width: 300px;
+}
+	
+figure figcaption{
+  	display: table-caption;
+	caption-side: bottom;
 }
 
 /*leadership page*/
@@ -132,40 +176,46 @@ h2 a:focus{
 	font-style: italic;
 }
 
-.container-leadership{
+.activities{
 	display: grid;
-	position: relative;
-	grid-template-columns: auto auto;
-  	grid-template-rows: auto auto;
+	align-items: center;
+	justify-items: center;
+	grid-template-columns: auto;
+  	grid-template-rows: auto auto auto auto;
  	grid-row-gap: 15px;
 }
 
 .zta, .ktp{
 	grid-column: 1 / span 1;
-	grid-row: auto / span 1;
 	background-color: #FFFFFF;
   	border: 6px solid #93E0EC;
 	padding: 5px;
 }
 
-.ktp-image img, .zta-image img{
-	grid-column: 1 / -1;
-	grid-row: auto / 1;
-	align-items: center;
-	justify-content: center;
-	padding: 10px;
-	max-width: 350px;
-	overflow: hidden;
-}
-
-
-.zta, .zta-image{
+.zta-image{
 	grid-row: 1 / auto;
 }
 
-.ktp, .ktp-image{
+.zta{
 	grid-row: 2 / auto;
 }
+
+.ktp-image{
+	grid-row: 3 / auto;
+}
+
+.ktp{
+	grid-row: 4 / auto;
+}
+
+.ktp-image img, .zta-image img{
+	grid-column: 1 / auto;
+	padding: 10px;
+	max-width: 350px;
+	height: auto;
+	overflow: inherit;
+}
+
 
 /*work page*/
 
@@ -173,12 +223,12 @@ h2 a:focus{
 	font-style: italic;
 }
 
-.container-work{
+.experience{
 	display: grid;
-	position: relative;
-	grid-template-columns: auto auto;
-  	grid-template-rows: auto auto auto auto;
- 	grid-row-gap: 15px;
+	grid-template-columns: auto;
+  	grid-template-rows: auto auto auto auto auto auto auto;
+	align-items: center;
+	justify-items: center;
 }
 
 .juni, .ncaa, .nextlevel, .skills{
@@ -190,33 +240,167 @@ h2 a:focus{
 }
 
 .juni-image img, .ncaa-image img, .nextlevel-image img{
-	grid-column: 1 / -1;
+	grid-column: 1 / auto;
 	grid-row: auto / 1;
 	align-items: center;
-	justify-content: center;
 	padding: 10px;
 	max-width: 350px;
 	overflow: hidden;
 }
 
-.juni, .juni-image{
+.juni-image{
 	grid-row: 1 / auto;
 }
 
-.ncaa, .ncaa-image{
+.juni{
 	grid-row: 2 / auto;
 }
 
-.nextlevel, .nextlevel-image{
+.ncaa-image{
 	grid-row: 3 / auto;
 }
 
-.skills{
+.ncaa{
 	grid-row: 4 / auto;
+}
+
+.nextlevel-image{
+	grid-row: 5 / auto;
+}
+
+.nextlevel{
+	grid-row: 6 / auto;
+}
+
+.skills{
+	grid-row: 7 / auto;
+	margin-top: 10px;
 }
 
 .skills ul{
 	list-style-type: none;
+	font-style: oblique;
+}
+
+/*desktop view*/
+
+@media screen and (min-width: 850px){
+	
+	.brooke_image_long{
+		display: block;
+		margin-left: auto;
+		margin-right: auto;
+		max-height: 200px;
+		width: auto;
+	}
+	
+	.containter{
+		display: flex;
+		flex-direction: row;
+	}	
+	
+	.experience, .skills{
+		display: grid;
+		grid-template-columns: auto auto;
+    	grid-template-rows: auto auto auto auto;
+		grid-row-gap: 10px;
+		align-items: center;
+		justify-items: center;
+	}
+	
+	.juni{
+		grid-row: 1 / auto;
+    	grid-column: 2 / span 1;
+	}
+	
+	.ncaa{
+		grid-row: 2 / auto;
+		grid-column: 1 / span 1;
+	}
+	
+	.nextlevel{
+		grid-row: 3 / auto;
+		grid-column: 2 / span 1;
+	}
+	
+	.juni-image{
+		grid-row: 1 / auto;
+    	grid-column: 1 / span 1;
+    	overflow: inherit;
+	}
+	
+	.ncaa-image{
+		grid-row: 2 / auto;
+		grid-column: 2 / span 1;
+    	overflow: inherit;
+	}
+	
+	.nextlevel-image{
+		grid-row: 3 / auto;
+    	grid-column: 1 / span 1;
+    	overflow: inherit;
+	}
+	
+	.skills{
+		border: none;
+		background-color: transparent;
+	}
+	
+	.skills h2{
+		grid-row: 4 / auto;
+		grid-column: 1 / span 1;
+		background-color: #FFFFFF;
+  		border: 6px solid #93E0EC;
+		padding: 50px;
+	}
+	
+	.skills ul{
+		grid-row: 4 / auto;
+		grid-column: 2 / span 1;
+		list-style: disc;
+	}
+	
+	.activities{
+		display: grid;
+		grid-template-columns: auto auto;
+    	grid-template-rows: auto auto;
+		grid-row-gap: 10px;
+		align-items: center;
+		justify-items: center;
+	}
+	
+	.zta{
+		grid-row: 1 / auto;
+    	grid-column: 1 / span 1;
+	}
+	
+	.ktp{
+		grid-row: 2 / auto;
+		grid-column: 2 / span 1;
+	}
+	
+	.zta-image{
+		grid-row: 1 / auto;
+		grid-column: 2 / span 1;
+		overflow: inherit;
+	}
+	
+	.ktp-image{
+		grid-row: 2 / auto;
+		grid-column: 1 / span 1;
+		overflow: inherit;
+	}
+	
+}
+
+/*reduced motion query*/
+
+@media screen and (prefers-reduced-motion) {
+	
+	.brooke_image{
+		animation: none;
+	}
+	
 }
 
 
