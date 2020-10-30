@@ -27,11 +27,6 @@ body{
 	width: auto;
 }
 
-#h_img{
-	padding: 20px;
-	border-bottom: 6px solid #93E0EC;
-}
-
 /*animation*/
 
 @-webkit-keyframes logo_stretch{
