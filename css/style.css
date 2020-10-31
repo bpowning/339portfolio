@@ -5,6 +5,8 @@ html{
 body{
 	font-family: "Futura";
 	background-color: #E9F8FB;
+	line-height: normal;
+	margin: 10px;
 }
 
 /*mobile first images*/
@@ -151,6 +153,11 @@ figure figcaption{
 }
 
 /*leadership page*/
+
+ul{
+	list-style-position: outside;
+	padding: 20px;
+}
 
 h2 a{
 	text-decoration: none;
