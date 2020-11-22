@@ -63,11 +63,11 @@ body{
 }
 
 .nav_links a:hover{
-	color: #85DCE8;
+	color: #830056;
 }
 
 .nav_links a:focus{
-	color: #85DCE8;
+	color: #830056;
 }
 
 /*paragraph headers*/
@@ -88,17 +88,19 @@ h2{
 /*footer*/
 
 footer{
+	display: grid;
+	grid-template-rows: auto auto;
 	background-color: rgba(0,0,0,0.50);
   	color: white;
   	padding: 10px;
-	text-align: right;
-	font-style: italic;
 	margin-top: 10px;
 }
 
 footer a{
+	grid-row: auto / span 1;
 	color: white;
 	text-decoration: none;
+	font-style: italic;
 }
 
 footer a:hover{
@@ -108,9 +110,48 @@ footer a:hover{
 footer a:focus{
 	color: #CAF0F5;
 }
+
 /*contact form*/
 .contact{
-	
+	grid-row: 1 / span 1;
+}
+
+form label{
+	font-style: italic;
+}
+
+input[type=text], input[type=email], textarea{
+ 	width: 100%;
+	padding: 12px 20px;
+ 	margin: 8px 0;
+	display: inline-block;
+ 	border: 1px solid #ccc;
+ 	border-radius: 4px;
+ 	box-sizing: border-box;
+}
+
+input[type=submit]{
+ 	width: 100%;
+	background-color: #830056;
+	color: white;
+	padding: 14px 20px;
+	margin: 8px 0;
+	border: none;
+	border-radius: 4px;
+	cursor: pointer;
+}
+
+input[type=submit]:hover{
+	background-color: #CAF0F5;
+}
+
+input[type=submit]:focus{
+	background-color: #CAF0F5;
+}
+
+.contact_line{
+	text-align: center;
+	margin: 15px;
 }
 
 /*home page*/
@@ -146,12 +187,13 @@ h3{
 	flex-wrap: wrap;
 	justify-content: center;
 	align-items: flex-start;
+	margin: 20px;
 }
 
 figure{
 	display: table;
 	table-layout: fixed;
-	}
+}
 	
 figure img{
 	border: 6px #93E0EC solid;
@@ -162,6 +204,7 @@ figure img{
 figure figcaption{
   	display: table-caption;
 	caption-side: bottom;
+	padding: 10px;
 }
 
 /*leadership page*/
@@ -311,7 +354,27 @@ h2 a:focus{
 	.containter{
 		display: flex;
 		flex-direction: row;
-	}	
+	}
+	
+	.about-image{
+		display: grid;
+		grid-template-rows: auto auto auto;
+		grid-template-columns: auto auto auto;
+	}
+	
+	figure img{
+		border: none;
+		margin: 0px;
+		padding: 0px;
+		height: 300px;
+		width: 300px;
+	}
+	
+	figure figcaption{
+		display: none;
+		width: 100%;
+		height: 
+	}
 	
 	.experience, .skills{
 		display: grid;
