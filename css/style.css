@@ -164,6 +164,7 @@ input[type=submit]:focus{
 
 .brooke_headshot{
 	padding-top: 10px;
+	padding-bottom: 20px;
 	max-width: auto;
 	max-height: 500px;
 }
@@ -220,12 +221,12 @@ h2 a{
 }
 
 h2 a:hover{
-	color: #17727E;
+	color: #830056;
 	text-decoration: underline;
 }
 
 h2 a:focus{
-	color: #17727E;
+	color: #830056;
 	text-decoration: underline;
 }
 
@@ -240,12 +241,11 @@ h2 a:focus{
 	grid-template-columns: auto;
   	grid-template-rows: auto auto auto auto;
  	grid-row-gap: 15px;
+	background-color: rgba(202,240,245, 0.3);
 }
 
 .zta, .ktp{
 	grid-column: 1 / span 1;
-	background-color: #FFFFFF;
-  	border: 6px solid #93E0EC;
 	padding: 5px;
 }
 
@@ -268,9 +268,10 @@ h2 a:focus{
 .ktp-image img, .zta-image img{
 	grid-column: 1 / auto;
 	padding: 10px;
-	max-width: 350px;
+	max-width: 300px;
 	height: auto;
 	overflow: inherit;
+	border: 3px ridge rgba(202,240,245, 1);
 }
 
 
@@ -283,26 +284,30 @@ h2 a:focus{
 .experience{
 	display: grid;
 	grid-template-columns: auto;
-  	grid-template-rows: auto auto auto auto auto auto auto;
+  	grid-template-rows: auto auto auto auto auto auto auto auto;
 	align-items: center;
 	justify-items: center;
+	background-color: rgba(202,240,245, 0.3);
 }
 
 .juni, .ncaa, .nextlevel, .skills{
 	grid-column: 1 / span 1;
 	grid-row: auto / span 1;
-	background-color: #FFFFFF;
-  	border: 6px solid #93E0EC;
 	padding: 5px;
 }
 
-.juni-image img, .ncaa-image img, .nextlevel-image img{
+.skills{
+	background-color: rgba(202,240,245, 0.3);
+}
+
+.juni-image img, .ncaa-image img, .nextlevel-image img, .skills_image img{
 	grid-column: 1 / auto;
 	grid-row: auto / 1;
 	align-items: center;
 	padding: 10px;
-	max-width: 350px;
+	max-width: 300px;
 	overflow: hidden;
+	border: 3px ridge rgba(202,240,245, 1);
 }
 
 .juni-image{
@@ -330,8 +335,12 @@ h2 a:focus{
 }
 
 .skills{
+	grid-row: 8 / auto;
+}
+
+.skills_image{
 	grid-row: 7 / auto;
-	margin-top: 10px;
+	margin-bottom: 10px;
 }
 
 .skills ul{
@@ -351,30 +360,271 @@ h2 a:focus{
 		width: auto;
 	}
 	
+	.nav_links{
+		font-size: 12px;
+	}
+	
 	.containter{
 		display: flex;
 		flex-direction: row;
 	}
 	
-	.about-image{
+	/*about page*/
+	
+	.about_me{
 		display: grid;
-		grid-template-rows: auto auto auto;
-		grid-template-columns: auto auto auto;
+		grid-template-columns: 325px 325px 325px;
+		grid-template-rows: 325px 325px 325px;
 	}
 	
-	figure img{
+	figcaption{
+		overflow: auto;
+	}
+	
+	.family figure img{
 		border: none;
 		margin: 0px;
 		padding: 0px;
-		height: 300px;
-		width: 300px;
+		height: 325px;
+		width: 325px;
+		position: absolute;
 	}
 	
-	figure figcaption{
-		display: none;
-		width: 100%;
-		height: 
+	.family figure figcaption{
+  		background: rgba(131,0,86,.5);
+		height: 305px;
+		width: 305px;
+		text-align: center;
+		margin: auto;
+  		color: #fff;
+  		visibility: hidden;
+  		opacity: 0;
+		position: relative;
+		transition: opacity .2s, visibility .2s;
 	}
+	
+	.family figure:hover figcaption{
+		visibility: visible;
+  		opacity: 1;
+	}
+	
+	.travel figure img{
+		border: none;
+		margin: 0px;
+		padding: 0px;
+		height: 325px;
+		width: 325px;
+		position: absolute;
+	}
+	
+	.travel figure figcaption{
+  		background: rgba(131,0,86,.5);
+		height: 305px;
+		width: 305px;
+		text-align: center;
+		margin: auto;
+  		color: #fff;
+  		visibility: hidden;
+  		opacity: 0;
+		position: relative;
+		transition: opacity .2s, visibility .2s;
+	}
+	
+	.travel figure:hover figcaption{
+		visibility: visible;
+  		opacity: 1;
+	}
+	
+	.friends figure img{
+		border: none;
+		margin: 0px;
+		padding: 0px;
+		height: 325px;
+		width: 325px;
+		position: absolute;
+	}
+	
+	.friends figure figcaption{
+  		background: rgba(131,0,86,.5);
+		height: 305px;
+		width: 305px;
+		text-align: center;
+		margin: auto;
+  		color: #fff;
+  		visibility: hidden;
+  		opacity: 0;
+		position: relative;
+		transition: opacity .2s, visibility .2s;
+	}
+	
+	.friends figure:hover figcaption{
+		visibility: visible;
+  		opacity: 1;
+	}
+	
+	.skiing figure img{
+		border: none;
+		margin: 0px;
+		padding: 0px;
+		height: 325px;
+		width: 325px;
+		position: absolute;
+	}
+	
+	.skiing figure figcaption{
+  		background: rgba(131,0,86,.5);
+		height: 305px;
+		width: 305px;
+		text-align: center;
+		margin: auto;
+  		color: #fff;
+  		visibility: hidden;
+  		opacity: 0;
+		position: relative;
+		transition: opacity .2s, visibility .2s;
+	}
+	
+	.skiing figure:hover figcaption{
+		visibility: visible;
+  		opacity: 1;
+	}
+	
+	.food figure img{
+		border: none;
+		margin: 0px;
+		padding: 0px;
+		height: 325px;
+		width: 325px;
+		position: absolute;
+	}
+	
+	.food figure figcaption{
+  		background: rgba(131,0,86,.5);
+		height: 305px;
+		width: 305px;
+		text-align: center;
+		margin: auto;
+  		color: #fff;
+  		visibility: hidden;
+  		opacity: 0;
+		position: relative;
+		transition: opacity .2s, visibility .2s;
+	}
+	
+	.food figure:hover figcaption{
+		visibility: visible;
+  		opacity: 1;
+	}
+	
+	.football figure img{
+		border: none;
+		margin: 0px;
+		padding: 0px;
+		height: 325px;
+		width: 325px;
+		position: absolute;
+	}
+	
+	.football figure figcaption{
+  		background: rgba(131,0,86,.5);
+		height: 305px;
+		width: 305px;
+		text-align: center;
+		margin: auto;
+  		color: #fff;
+  		visibility: hidden;
+  		opacity: 0;
+		position: relative;
+		transition: opacity .2s, visibility .2s;
+	}
+	
+	.football figure:hover figcaption{
+		visibility: visible;
+  		opacity: 1;
+	}
+	
+	.mfm figure img{
+		border: none;
+		margin: 0px;
+		padding: 0px;
+		height: 325px;
+		width: 325px;
+		position: absolute;
+	}
+	
+	.mfm figure figcaption{
+  		background: rgba(131,0,86,.5);
+		height: 305px;
+		width: 305px;
+		text-align: center;
+		margin: auto;
+  		color: #fff;
+  		visibility: hidden;
+  		opacity: 0;
+		position: relative;
+		transition: opacity .2s, visibility .2s;
+	}
+	
+	.mfm figure:hover figcaption{
+		visibility: visible;
+  		opacity: 1;
+	}
+	
+	.walks figure img{
+		border: none;
+		margin: 0px;
+		padding: 0px;
+		height: 325px;
+		width: 325px;
+		position: absolute;
+	}
+	
+	.walks figure figcaption{
+  		background: rgba(131,0,86,.5);
+		height: 305px;
+		width: 305px;
+		text-align: center;
+		margin: auto;
+  		color: #fff;
+  		visibility: hidden;
+  		opacity: 0;
+		position: relative;
+		transition: opacity .2s, visibility .2s;
+	}
+	
+	.walks figure:hover figcaption{
+		visibility: visible;
+  		opacity: 1;
+	}
+	
+	.nyc figure img{
+		border: none;
+		margin: 0px;
+		padding: 0px;
+		height: 325px;
+		width: 325px;
+		position: absolute;
+	}
+	
+	.nyc figure figcaption{
+  		background: rgba(131,0,86,.5);
+		height: 305px;
+		width: 305px;
+		text-align: center;
+		margin: auto;
+  		color: #fff;
+  		visibility: hidden;
+  		opacity: 0;
+		position: relative;
+		transition: opacity .2s, visibility .2s;
+	}
+	
+	.nyc figure:hover figcaption{
+		visibility: visible;
+  		opacity: 1;
+	}
+	
+	/*work page*/
 	
 	.experience, .skills{
 		display: grid;
@@ -383,6 +633,7 @@ h2 a:focus{
 		grid-row-gap: 10px;
 		align-items: center;
 		justify-items: center;
+		padding: 10px;
 	}
 	
 	.juni{
@@ -398,6 +649,17 @@ h2 a:focus{
 	.nextlevel{
 		grid-row: 3 / auto;
 		grid-column: 2 / span 1;
+	}
+	
+	.skills ul{
+		grid-row: 4 / auto;
+		grid-column: 1 / span 1;
+		list-style: disc;
+	}
+	
+	.skills h2{
+		grid-area: 1 / 1 / 4 / 1;
+		margin-bottom: -100px;
 	}
 	
 	.juni-image{
@@ -418,24 +680,13 @@ h2 a:focus{
     	overflow: inherit;
 	}
 	
-	.skills{
-		border: none;
-		background-color: transparent;
-	}
-	
-	.skills h2{
-		grid-row: 4 / auto;
-		grid-column: 1 / span 1;
-		background-color: #FFFFFF;
-  		border: 6px solid #93E0EC;
-		padding: 50px;
-	}
-	
-	.skills ul{
+	.skills_image{
 		grid-row: 4 / auto;
 		grid-column: 2 / span 1;
-		list-style: disc;
+		overflow: inherit;
 	}
+	
+	/*leadeship page*/
 	
 	.activities{
 		display: grid;
@@ -444,6 +695,7 @@ h2 a:focus{
 		grid-row-gap: 10px;
 		align-items: center;
 		justify-items: center;
+		padding: 20px;
 	}
 	
 	.zta{
@@ -468,6 +720,24 @@ h2 a:focus{
 		overflow: inherit;
 	}
 	
+	/*home page*/
+	
+	.brooke_headshot{
+		padding: 20px;
+		max-height: 800px;
+	}
+	
+	.summary{
+		justify-content: center;
+		padding: 100px;
+	}
+	
+	/*footer*/
+	
+	form{
+		max-width: 450px;
+		margin: auto;
+	}
 }
 
 /*reduced motion query*/
