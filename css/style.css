@@ -44,6 +44,63 @@ body{
 	to {opacity: 1}
 }
 
+/*flip card*/
+
+.skills{
+	height: 250px;
+	width: 250px;
+}
+
+.flip-card ul{
+	list-style: none;
+	padding: 20px;
+}
+
+.flip-card {
+  	background-color: transparent;
+  	width: 250px;
+  	height: 250px;
+  	perspective: 1000px;
+	margin-right: auto;
+	margin-left: auto;
+	padding-bottom: 20px;
+}
+
+.flip-card-inner {
+  	position: relative;
+  	width: 100%;
+  	height: 100%;
+  	text-align: center;
+  	transition: transform 0.8s;
+  	transform-style: preserve-3d;
+}
+
+.flip-card:hover .flip-card-inner,
+.flip-card:focus-within .flip-card-inner,
+.flip-card:active .flip-card-inner,
+.flip-card:focus .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+.flip-card-front, .flip-card-back {
+  	position: absolute;
+  	width: 100%;
+  	height: 100%;
+  	-webkit-backface-visibility: hidden; 
+  	backface-visibility: hidden;
+}
+
+.flip-card-front {
+  	background-color: #bbb;
+  	color: black;
+}
+
+.flip-card-back {
+  	background-color: #830056;
+  	color: white;
+  	transform: rotateY(180deg);
+}
+
 /*nav header*/
 
 .nav_links{
@@ -298,12 +355,15 @@ h2 a:focus{
 	font-style: italic;
 }
 
-.experience{
+.containter-work{
 	background-image: url("../images/stars.png");
 	background-attachment: fixed;
 	background-position: center;
  	background-repeat: repeat;
   	background-size: cover;
+}
+
+.experience{
 	display: grid;
 	grid-template-columns: auto;
   	grid-template-rows: auto auto auto auto auto auto auto auto;
@@ -353,7 +413,7 @@ h2 a:focus{
 
 /*desktop view*/
 
-@media screen and (min-width: 850px){
+@media screen and (min-width: 1024px){
 	
 	.brooke_image_long{
 		display: block;
@@ -737,6 +797,19 @@ h2 a:focus{
 	}
 }
 
+
+/*tablet view*/
+@media (min-width: 768px) and (max-width: 1024px) {
+	
+  
+}
+
+/*tablet landscape view*/
+@media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+  
+  
+}
+
 /*reduced motion query*/
 
 @media screen and (prefers-reduced-motion) {
@@ -744,6 +817,10 @@ h2 a:focus{
 	.brooke_headshot{
 		animation: none;
 	}
+	
+	.flip-card-inner {
+        transition: transform none;
+    }
 	
 }
 
