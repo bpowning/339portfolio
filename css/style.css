@@ -63,7 +63,7 @@ body{
   	perspective: 1000px;
 	margin-right: auto;
 	margin-left: auto;
-	padding-bottom: 20px;
+	padding: 20px;
 }
 
 .flip-card-inner {
@@ -801,13 +801,268 @@ h2 a:focus{
 /*tablet view*/
 @media (min-width: 768px) and (max-width: 1024px) {
 	
-  
-}
-
-/*tablet landscape view*/
-@media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
-  
-  
+	/*home page*/
+	.container{
+		flex-direction: column;
+	}
+	
+	/*about page*/
+	.about_me{
+		display: grid;
+		grid-template-columns: 325px 325px;
+		grid-template-rows: 325px 325px 325px;
+		grid-gap: 10px;
+		align-content: center;
+		justify-content: center;
+	}
+	
+	figcaption{
+		overflow: auto;
+	}
+	
+	.family figure img{
+		border: none;
+		margin: 0px;
+		padding: 0px;
+		height: 325px;
+		width: 325px;
+		position: absolute;
+	}
+	
+	.family figure figcaption{
+  		background: rgba(131,0,86,.5);
+		height: 305px;
+		width: 305px;
+		text-align: center;
+		margin: auto;
+  		color: #fff;
+  		visibility: hidden;
+  		opacity: 0;
+		position: relative;
+		transition: opacity .2s, visibility .2s;
+	}
+	
+	.family figure:hover figcaption{
+		visibility: visible;
+  		opacity: 1;
+	}
+	
+	.travel figure img{
+		border: none;
+		margin: 0px;
+		padding: 0px;
+		height: 325px;
+		width: 325px;
+		position: absolute;
+	}
+	
+	.travel figure figcaption{
+  		background: rgba(131,0,86,.5);
+		height: 305px;
+		width: 305px;
+		text-align: center;
+		margin: auto;
+  		color: #fff;
+  		visibility: hidden;
+  		opacity: 0;
+		position: relative;
+		transition: opacity .2s, visibility .2s;
+	}
+	
+	.travel figure:hover figcaption{
+		visibility: visible;
+  		opacity: 1;
+	}
+	
+	.friends figure img{
+		border: none;
+		margin: 0px;
+		padding: 0px;
+		height: 325px;
+		width: 325px;
+		position: absolute;
+	}
+	
+	.friends figure figcaption{
+  		background: rgba(131,0,86,.5);
+		height: 305px;
+		width: 305px;
+		text-align: center;
+		margin: auto;
+  		color: #fff;
+  		visibility: hidden;
+  		opacity: 0;
+		position: relative;
+		transition: opacity .2s, visibility .2s;
+	}
+	
+	.friends figure:hover figcaption{
+		visibility: visible;
+  		opacity: 1;
+	}
+	
+	.skiing figure img{
+		border: none;
+		margin: 0px;
+		padding: 0px;
+		height: 325px;
+		width: 325px;
+		position: absolute;
+	}
+	
+	.skiing figure figcaption{
+  		background: rgba(131,0,86,.5);
+		height: 305px;
+		width: 305px;
+		text-align: center;
+		margin: auto;
+  		color: #fff;
+  		visibility: hidden;
+  		opacity: 0;
+		position: relative;
+		transition: opacity .2s, visibility .2s;
+	}
+	
+	.skiing figure:hover figcaption{
+		visibility: visible;
+  		opacity: 1;
+	}
+	
+	.food figure img{
+		border: none;
+		margin: 0px;
+		padding: 0px;
+		height: 325px;
+		width: 325px;
+		position: absolute;
+	}
+	
+	.food figure figcaption{
+  		background: rgba(131,0,86,.5);
+		height: 305px;
+		width: 305px;
+		text-align: center;
+		margin: auto;
+  		color: #fff;
+  		visibility: hidden;
+  		opacity: 0;
+		position: relative;
+		transition: opacity .2s, visibility .2s;
+	}
+	
+	.food figure:hover figcaption{
+		visibility: visible;
+  		opacity: 1;
+	}
+	
+	.football figure img{
+		border: none;
+		margin: 0px;
+		padding: 0px;
+		height: 325px;
+		width: 325px;
+		position: absolute;
+	}
+	
+	.football figure figcaption{
+  		background: rgba(131,0,86,.5);
+		height: 305px;
+		width: 305px;
+		text-align: center;
+		margin: auto;
+  		color: #fff;
+  		visibility: hidden;
+  		opacity: 0;
+		position: relative;
+		transition: opacity .2s, visibility .2s;
+	}
+	
+	.football figure:hover figcaption{
+		visibility: visible;
+  		opacity: 1;
+	}
+	
+	.mfm figure img{
+		border: none;
+		margin: 0px;
+		padding: 0px;
+		height: 325px;
+		width: 325px;
+		position: absolute;
+	}
+	
+	.mfm figure figcaption{
+  		background: rgba(131,0,86,.5);
+		height: 305px;
+		width: 305px;
+		text-align: center;
+		margin: auto;
+  		color: #fff;
+  		visibility: hidden;
+  		opacity: 0;
+		position: relative;
+		transition: opacity .2s, visibility .2s;
+	}
+	
+	.mfm figure:hover figcaption{
+		visibility: visible;
+  		opacity: 1;
+	}
+	
+	.walks figure img{
+		border: none;
+		margin: 0px;
+		padding: 0px;
+		height: 325px;
+		width: 325px;
+		position: absolute;
+	}
+	
+	.walks figure figcaption{
+  		background: rgba(131,0,86,.5);
+		height: 305px;
+		width: 305px;
+		text-align: center;
+		margin: auto;
+  		color: #fff;
+  		visibility: hidden;
+  		opacity: 0;
+		position: relative;
+		transition: opacity .2s, visibility .2s;
+	}
+	
+	.walks figure:hover figcaption{
+		visibility: visible;
+  		opacity: 1;
+	}
+	
+	.nyc figure img{
+		border: none;
+		margin: 0px;
+		padding: 0px;
+		height: 325px;
+		width: 325px;
+		position: absolute;
+	}
+	
+	.nyc figure figcaption{
+  		background: rgba(131,0,86,.5);
+		height: 305px;
+		width: 305px;
+		text-align: center;
+		margin: auto;
+  		color: #fff;
+  		visibility: hidden;
+  		opacity: 0;
+		position: relative;
+		transition: opacity .2s, visibility .2s;
+	}
+	
+	.nyc figure:hover figcaption{
+		visibility: visible;
+  		opacity: 1;
+	}
+	
 }
 
 /*reduced motion query*/
