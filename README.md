@@ -1,3 +1,3 @@
-# 339portfolio
+# Portfolio
 
-Resume website for SI 339 portfolio project
+Resume website portfolio developed using HTML and CSS
